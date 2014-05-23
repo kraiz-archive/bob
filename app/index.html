@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="bob" ng-csp>
+<head>
+    <script src="../libs/angularjs/angular.js"></script>
+    <script src="../libs/angularjs/angular-route.js"></script>
+    <script src="../libs/angularjs/angular-bootstrap-ui.js"></script>
+    <script src="app.js"></script>
+    <script src="services/i18n.js"></script>
+
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="container-fluid">
+    <h2>{{ 'appName' | trans }}</h2>
+    <small><trans key="appDescription" /></small>
+
+    <div ng-controller="MainCtrl">
+        bla: {{ test }}
+    </div>
+
+    <div ng-view></div>
+</div>
+</body>
+</html>
