@@ -6,5 +6,21 @@
     "appDescription": {
         "message": "A sensible time tracker",
         "description": "Application description"
+    },
+    "currentTask": {
+        "message": "Current task",
+        "description": "Top link label"
+    },
+    "taskTitle": {
+        "message": "Task title",
+        "description": "Task title"
+    },
+    "categoryTitle": {
+        "message": "Category title",
+        "description": "Category title"
+    },
+    "start": {
+        "message": "Start",
+        "description": "Start the tracking of a task"
     }
 }

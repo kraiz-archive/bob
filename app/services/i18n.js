@@ -12,25 +12,26 @@
         );
     }
 
-    angular.module('i18n', [])
-        .factory('trans', function () {
-            return trans;
-        })
+    var i18n = angular.module('i18n', []);
 
-        .filter('trans', function () {
-            return trans;
-        })
+    i18n.factory('trans', function () {
+        return trans;
+    });
 
-        .directive('trans', function () {
-            return {
-                restrict: 'E',
-                scope: {
-                    key: '@'
-                },
-                link: function ($scope, $element, $attributes, controller) {
-                    $element.val(trans($attributes.key));
-                }
+    i18n.filter('trans', function () {
+        return trans;
+    });
+
+    i18n.directive('trans', function () {
+        return {
+            restrict: 'E',
+            scope: {
+                key: '@'
+            },
+            link: function ($scope, $element, $attributes, controller) {
+                $element.replaceWith(trans($attributes.key));
             }
-        });
+        }
+    });
 
 })(chrome, window.angular);
